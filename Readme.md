@@ -78,12 +78,17 @@ The default compiler options are described in `cmake/CompilerOptionSelector.cmak
 
 `$ export CMP_HOME=hogehoge`
 
-In following exsmples, assuming that TextParser and PMlib are installed under the CPM_HOME directory. If not, please specify applicable directory paths.
+Example: ${HOME}/lib
+
+In the following examples, assuming that TextParser and PMlib are installed under the CPM_HOME directory. If not, please specify applicable directory paths.
+
 
 ### INTEL/GNU compiler
 
 ~~~
-$ cmake -DINSTALL_DIR=${CPM_HOME}/CPMlib -Dwith_MPI=yes -Dreal_type=float -Denable_LMR=no -Dwith_example=no -Dwith_TP=${CPM_HOME}/TextParser ..
+$ cmake -DINSTALL_DIR=${CPM_HOME}/CPMlib -Dwith_TP=${CPM_HOME}/TextParser 
+        -Dreal_type=float -Denable_LMR=no -Dwith_example=no 
+        -Dwith_MPI=yes -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpicxx..
 ~~~
 
 
