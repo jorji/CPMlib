@@ -33,7 +33,10 @@ src/              Source codes
 
 ~~~
 $ export CC=c_compiler CXX=c++_compiler F90=fortran_compiler FC=fortran_compiler
-$ export PM_HOME=/hogehoge
+$ export CPM_HOME=/hogehoge
+
+Example for hogehoge: ${HOME}/lib
+
 $ mkdir BUILD
 $ cd BUILD
 $ cmake [options] ..
@@ -76,9 +79,9 @@ The default compiler options are described in `cmake/CompilerOptionSelector.cmak
 
 ## Configure Examples
 
-`$ export CMP_HOME=hogehoge`
+`$ export CPP_HOME=hogehoge`
 
-Example: ${HOME}/lib
+Example for hogehoge: ${HOME}/lib
 
 In the following examples, assuming that TextParser and PMlib are installed under the CPM_HOME directory. If not, please specify applicable directory paths.
 
